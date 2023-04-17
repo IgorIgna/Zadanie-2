@@ -1,18 +1,14 @@
 <?php
 if(!empty($_POST['Submit'])){
-    if (isset($_POST['Submit'])) {
-        if($_POST['login'] === "admin"){
-            if($_POST['haslo'] === "test"){
-                echo "<h1>Poprawne Login i Hasło</h1><br>";
-                echo "Witamy ".$_POST['login'];
-            }
-            else {
-                echo "<h1>Błędne Hasło</h1>";
-            }
+    if($_POST['login'] === "admin"){
+        if($_POST['haslo'] === "test"){
+            echo "<h1>Poprawne Login i Hasło</h1><br>";
+            echo "Witamy ".$_POST['login'];
+        } else {
+            echo "<h1>Błędne Hasło</h1>";
         }
-        else {
-            echo "<h1>Błędny Login</h1>";
-        }
+    } else {
+        echo "<h1>Błędny Login</h1>";
     }
 } 
 ?>
